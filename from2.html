@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Details</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2>Form Submitted Successfully</h2>
+    <button id="displayBtn">Display Stored Details</button>
+    <div id="userDetails"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#displayBtn").click(function() {
+                
+                let name = localStorage.getItem("name");
+                let email = localStorage.getItem("email");
+
+                if (name && email) {
+                    $("#userDetails").html(`
+                        <p><strong>Name:</strong> ${name}</p>
+                        <p><strong>Email:</strong> ${email}</p>
+                    `);
+                } else {
+                    $("#userDetails").html("<p>No data found.</p>");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

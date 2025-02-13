@@ -1,0 +1,28 @@
+<html lang="en" >
+    <head>
+        <title>Registered user</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h2> Registered Users</h2>
+        <ul id="userlist"></ul>
+        <a href ="assign2.html">Back to Registered</a>
+
+<script>
+    $(document).ready(function(){
+        let users =JSON.parse(localStorage.getItem("users")) || [];
+        let userlist= $("#userlist");
+
+        if (users.length === 0){
+            userlist.html("<li> No users found. </li>");
+        }
+        else{
+
+            users.forEach(user => {
+                userlist.append(`<li>Name: ${user.name} Email: ${user.email}</li>`);
+            });
+        }
+    });
+</script>
+</body>
+</html>
