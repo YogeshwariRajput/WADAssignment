@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Mobile App - New Stylish</title>
+
+  <!-- jQuery Mobile CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+  <!-- jQuery and jQuery Mobile JS -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    /* New Header Style */
+    .custom-header {
+      background: linear-gradient(45deg, #6a11cb, #2575fc); /* Purple to Blue */
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Page Content Center */
+    .custom-content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    /* New Button Style */
+    .custom-button {
+      display: inline-block;
+      background: linear-gradient(45deg, #00c6ff, #0072ff); /* Light blue to Dark blue */
+      color: white !important;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      padding: 15px 0;
+      width: 90%;
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 114, 255, 0.5);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .custom-button:hover {
+      background: linear-gradient(45deg, #0072ff, #00c6ff);
+      box-shadow: 0 6px 12px rgba(0, 114, 255, 0.7);
+      transform: scale(1.05);
+    }
+
+    /* Page background */
+    .ui-page {
+      background: #f0f8ff; /* light background */
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Page 1 -->
+<div data-role="page" id="page1" data-theme="b">
+
+  <div data-role="header" class="custom-header">
+    Welcome!
+  </div>
+
+  <div role="main" class="ui-content custom-content">
+    <h2>Start Your Journey</h2>
+    <p>Discover the magic of stylish mobile design with us!</p>
+    <a href="#page2" data-role="button" data-transition="slide" class="custom-button">Next ➡️</a>
+  </div>
+
+</div>
+
+<!-- Page 2 -->
+<div data-role="page" id="page2" data-theme="b">
+
+  <div data-role="header" class="custom-header">
+    About Us
+  </div>
+
+  <div role="main" class="ui-content custom-content">
+    <h2>We Create Magic</h2>
+    <p>Using modern technologies to make beautiful and responsive mobile apps!</p>
+    <a href="#page1" data-role="button" data-transition="fade" class="custom-button">⬅️ Back</a>
+  </div>
+
+</div>
+
+</body>
+</html>
